@@ -1,0 +1,28 @@
+# Authentication failures
+Failed password for.*from
+Invalid user.*from
+authentication failure
+sudo: .*authentication failure
+
+# Successful logins
+Accepted password for.*from
+
+# SSH and network anomalies
+Connection closed by.*\[preauth\]
+reverse mapping checking getaddrinfo for.*failed
+Disconnected from.*port
+Did not receive identification string from
+Received disconnect from.*Bye Bye
+
+# Service restarts
+Stopped OpenSSH
+Started OpenSSH
+
+# Root access / privilege escalation
+session opened for user root
+session closed for user root
+user .*?: TTY=.* ; PWD=.* ; USER=root ; COMMAND=
+
+# Misc brute-force defense (fail2ban, etc.)
+Ban .* from
+Unban .* from
